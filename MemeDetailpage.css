@@ -1,0 +1,500 @@
+/* Meme Detail Page Styles */
+.meme-detail-page {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 800px;
+}
+
+.sidebar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header Section */
+.coin-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.coin-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  margin: 0;
+}
+
+.coin-symbol {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.current-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.price-change {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.price-change.positive {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.price-change.negative {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Chart Container */
+.chart-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  height: 400px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-placeholder {
+  text-align: center;
+}
+
+.chart-text {
+  font-size: 2rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Panel Styles */
+.info-panel,
+.transactions-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-header:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00d4ff;
+}
+
+.expand-icon {
+  font-size: 1rem;
+  color: #00d4ff;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.panel-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-label {
+  color: #888;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Transactions List */
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tx-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tx-type {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tx-type.buy {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+}
+
+.tx-type.sell {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.tx-amount {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tx-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.tx-price {
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.tx-time {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.tx-user {
+  color: #666;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+/* Chat Section */
+.chat-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00d4ff;
+  text-align: center;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.chat-user {
+  color: #00d4ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.chat-text {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+  border-color: #00d4ff;
+}
+
+.chat-input::placeholder {
+  color: #666;
+}
+
+.chat-send {
+  padding: 0.8rem 1.2rem;
+  background: #00d4ff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-send:hover {
+  background: #00b8e6;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+/* Fear & Greed Section */
+.fear-greed-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fear-greed-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00d4ff;
+}
+
+.fear-greed-meter {
+  margin-bottom: 1.5rem;
+}
+
+.meter-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.meter-fill {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.meter-center {
+  width: 140px;
+  height: 140px;
+  background: #0a0a0a;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.meter-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.meter-label {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 600;
+  text-align: center;
+}
+
+.vote-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #00d4ff, #00ff88);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.vote-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .meme-detail-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .chat-section,
+  .fear-greed-section {
+    flex: 1;
+  }
+  
+  .chat-section {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .coin-name {
+    font-size: 2rem;
+  }
+  
+  .price-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .current-price {
+    font-size: 2.5rem;
+  }
+  
+  .sidebar {
+    flex-direction: column;
+  }
+  
+  .meter-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .meter-center {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .meter-score {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .meme-detail-page {
+    padding: 0.5rem;
+  }
+  
+  .coin-name {
+    font-size: 1.8rem;
+  }
+  
+  .current-price {
+    font-size: 2rem;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+  
+  .chart-text {
+    font-size: 1.5rem;
+  }
+}
