@@ -1,9 +1,15 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import MemeDetailPage from './components/MemeDetailPage'
+import MemeDetailPage from './components/MemeDetailPage';
+
 function App() {
   const [count, setCount] = useState(0)
+  const [showMemeDetail, setShowMemeDetail] = useState(false)
+
+  if (showMemeDetail) {
+    return <MemeDetailPage />
+  }
 
   return (
     <div className="App">
@@ -14,6 +20,23 @@ function App() {
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
+          </button>
+        </p>
+        <p>
+          <button 
+            type="button" 
+            onClick={() => setShowMemeDetail(true)}
+            style={{ 
+              marginTop: '10px', 
+              padding: '10px 20px', 
+              backgroundColor: '#22d3ee', 
+              color: 'black', 
+              border: 'none', 
+              borderRadius: '5px',
+              cursor: 'pointer'
+            }}
+          >
+            View Meme Detail Page
           </button>
         </p>
         <p>
